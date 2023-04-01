@@ -24,9 +24,42 @@ class Dashboard {
             process.exit(0)
         }
 
+        if(!params.theme){
+            console.log("[Aoi-Dashboard] Theme: Black & Red [Default]")
+            params.theme="BlackAndRed"
+        }
+
+        if (!params.port) {
+            console.log("[Aoi-Dashboard] Port není nastaven dashboard je zpuštěn na portu 750")
+            params.port = 750
+        }
+
 
     }
+
+    loadDashboard() {
+
+        const params = this.params;
+
+
+
+        const app = express()
+
+        app.engine('html', require('ejs').renderFile);
+        app.set('view engine', 'html');
+        app.set('views', __dirname + "../Pages");
+        
+        app.listen(params.port)
+
+        require("../Framework/main.js")(app, params)
+        console.log("[Aoi-Dashboard] Dashboard je zpuštěn na portu" + params.port)
+
+
+    
+    
+    }
 }
+
 
 module.exports = {
 
