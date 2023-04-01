@@ -1,4 +1,4 @@
-const { Dashboard } = require("./Dashboard/dashboard");
+const { Dashboard } = require("./Dashboard/dashboard.js");
 
 module.exports = {
 
