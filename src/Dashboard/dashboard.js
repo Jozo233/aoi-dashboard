@@ -1,5 +1,4 @@
 const express = require("express")
-const session = require('express-session');
 const path = require('path')
 const fs = require('fs')
 const bodyParser = require("body-parser")
@@ -34,6 +33,11 @@ class Dashboard {
             params.port = 750
         }
 
+        if (!params.name) {
+            console.log("[Aoi-Dashboard] Jméno není nastaveno")
+            params.name = Aoi-Dashboard-Bot
+        }
+
 
     }
 
@@ -53,6 +57,11 @@ class Dashboard {
 
         require("../Framework/main.js")(app, params)
         console.log("[Aoi-Dashboard] Dashboard je zpuštěn na portu" + params.port)
+        console.log("[Aoi-Dashboard] by Jozo_85 2023")
+
+        this.app = app;
+
+
 
 
     
