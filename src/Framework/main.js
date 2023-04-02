@@ -8,5 +8,6 @@ module.exports = (app, params) => {
     }
 
     require("./Assets/Images")(app,params)
+    require("./Dashboard/Owner/manageAdmin")(app,params,isLoggin)
 
 }

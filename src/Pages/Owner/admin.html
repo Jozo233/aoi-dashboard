@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOI-DASHBOARD</title>
+
+    <style>
+        .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 30%;
+            font-weight: bolder;
+        }
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Admin List</h1>
+        <button id="myButton">
+            Add Admin
+        </button>
+    </center>
+
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <h1 >
+                   Enter Admin discord below for example: Jozo_85#2261
+              </h1>
+            <p>Admin has permison to edit bot file and kick bot form server</p>
+            <form>
+                <input type="text">
+                <input type="submit">
+            </form>
+            <button id="closePopup">
+                  Close
+              </button>
+        </div>
+    </div>
+  
+    <script>
+        myButton.addEventListener("click", function () {
+            myPopup.classList.add("show");
+        });
+        closePopup.addEventListener("click", function () {
+            myPopup.classList.remove("show");
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup) {
+                myPopup.classList.remove("show");
+            }
+        });
+    </script>
+
+    
+</body>
+</html>

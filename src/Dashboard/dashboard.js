@@ -4,7 +4,7 @@ const fs = require('fs')
 const bodyParser = require("body-parser")
 
 
-const util = require("../utilFunc.js")
+const util = require("../Util/utilFunc.js")
 
 class Dashboard {
     constructor(params) {
@@ -93,5 +93,5 @@ class Dashboard {
 
 module.exports = {
 
-    Dashboards
+    Dashboard
 }
