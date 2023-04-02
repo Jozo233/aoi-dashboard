@@ -33,6 +33,27 @@ class Dashboard {
             params.port = 750
         }
 
+        //Discord OAuth2
+        if (!params.client_id) {
+            console.log("[Aoi-Dashboard] Client Id není nastaveno")
+            process.exit(0)
+        }
+
+        if (!params.client_secret) {
+            console.log("[Aoi-Dashboard] Client Secret není nastaveno")
+            process.exit(0)
+        }
+
+        if (!params.url) {
+            console.log("[Aoi-Dashboard] Redirect Url není nastavena")
+            process.exit(0)
+        }
+
+        if (!params.owner_id) {
+            console.log("[Aoi-Dashboard] Owner Id není nastaveno")
+            process.exit(0)
+        }
+
         if (!params.name) {
             console.log("[Aoi-Dashboard] Jméno není nastaveno")
             params.name = Aoi-Dashboard-Bot
