@@ -17,7 +17,7 @@ async function checkVersion() {
 
     let c_name = require('../../package.json').name;
     
-    if (c_name !== "@Jozo_85/aoi-dashboard") {
+    if (c_name !== "aoi-dashboard") {
       console.log("[Aoi-Dashboard] Nepoužíváš správnou verzi");
     }
   
